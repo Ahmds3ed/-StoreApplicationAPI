@@ -1,0 +1,97 @@
+
+Store Application API
+
+After Run Project 
+
+
+
+ ** User **
+
+1- login 
+ * Description : Using Username, Password you will get message success in the case of valid authentication
+                 and failure message in case of invalid  authentication.
+
+ * http://localhost:8080/StoreApplicationAPI/{username}/{password}
+
+
+2- Add User 
+ * Description : Add user to store you will enter username , password , mail , address , phone this is mandatory.
+ 
+ * http://localhost:8080/StoreApplicationAPI/addUser?name=ahmdsa3ed&pass=asaied&mail=ahmds3ed@outlook.com&address=addr1&phone=01100928802 
+   you will get this message (User Added Successfully ...).
+
+
+
+
+
+
+
+ ** Category **
+
+
+1- Add new category
+ * Description : Add system Category.
+  
+ * http://localhost:8080/StoreApplicationAPI/addCategory?name=catName&desc=descriptionForCategory 
+ - you will get message for sucess or failure.
+
+
+2- Rename Category
+ * Description : change Name of Existing Category.
+
+ * http://localhost:8080/StoreApplicationAPI/renameCategory/{oldName}/{newName}
+ - you will get object after updated. 
+
+
+3- Delete Category
+ * http://localhost:8080/StoreApplicationAPI/deleteCategory/{categoryName}
+ - you will get message for sucess or failure.
+
+
+4- List all Category
+ * http://localhost:8080/StoreApplicationAPI/allCategory
+ - you will get list of category.
+
+
+
+
+ ** Product **
+
+
+1- Add Product 
+ * Description : Add Product to store you will enter name , description , price , quentity , category this is mandatory.
+ 
+ * http://localhost:8080/StoreApplicationAPI/addProduct/{categoryName}?name=islamicHistory&desc=description for product&price=200&quentity=8
+   if you enter invalid category name you will get this message (Product Must Be In Category . Plz Enter a vaild Category).
+   if you enter valid category and vaild product you will get this message (Product Added Failed ...).
+   if you enter valid category and vaild product you will get this message (Product Added Successfully ...).
+
+
+2- Update Product
+ * Description: Update existing product you can Update name , price , quentity , category.
+ 
+ * http://localhost:8080/StoreApplicationAPI/updateProduct/{productName}?name=islamicHistory&desc=description for product&price=200&quentity=8
+ add only attributes that you want to update like name or desc or category
+ ex : update Product name
+ -http://localhost:8080/StoreApplicationAPI/updateProduct/{productName}?name=islamicHistory
+ -you will get project after updated. 
+ 
+
+3- Delete Product 
+ * Description : Delete existing product.
+ 
+ * http://localhost:8080/StoreApplicationAPI/deleteProduct/{productName}
+ - you will get message for sucess or failure.
+
+
+4- Get all products From Category
+ * Description : get all products in specific category.
+
+ * http://localhost:8080/StoreApplicationAPI/Products/{categoryName} 
+ - you will get list of products.
+
+
+5- Get all products 
+ * http://localhost:8080/StoreApplicationAPI/allProducts
+
+
